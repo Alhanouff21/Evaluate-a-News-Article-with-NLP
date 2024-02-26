@@ -1,0 +1,62 @@
+$primary-color: #eddcd9;
+$second-color: #de5499;
+$third-color : #264143;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Quintessential&display=swap');
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Playfair", serif;
+    font-weight: 300;
+    height: 100vh;;
+    width: 100%;
+    display: flex;
+    background-image: linear-gradient(135deg, $second-color 10%, $third-color 50%, $primary-color 100%);}
+  ::selection{
+    color: #f2f2f2;
+    background: $second-color;
+  }
+  body::before,
+  body::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+ .text-content{
+    width: 40%;
+    margin:  0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+.nav{
+    margin: auto;
+  width: 100%;
+  padding: 35px 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;}
+
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 6px;
+  outline: none;
+  color: #f2f2f2;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 6px 15px;
+  border: none;
+  background-image: linear-gradient( 135deg, $second-color  10%, $third-color  100%);
+}
+ 
+// main {
+//     flex: 2;
+// }

@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
 
-        <header>
-            <div class="">
-                Logo
+<body>
+    <header id="header">
+        <div class="nav">
+        <div class="logo">
+            Evaluate-a-News-Article-with-NLP
+        </div>
+        <div class="home">
+            Home
+        </div>
+       </div>
+        <section class="text-content">
+            <form id="form" >
+                <input id="userInput" type="text" name="input" value="" placeholder="paste an article URL" >
+                <input type="submit" name="" value="submit" id="button">
+                <input type="reset" name="" value="reset" id="reset">
+
+            </form>
+       
+           <section>
+            <strong>Form Results:</strong>
+            <div>
+                <p id="results"></p>
             </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
-
-        <main>
-            <section>
-                <form class="" onsubmit="return handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return handleSubmit(event)" onsubmit="return handleSubmit(event)">
-                </form>
             </section>
+       </section>
+  </header>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
+    <footer class="footer">
+        <div class="container">
+          <p class="footer-text">This is the footer</p>
+        </div>
+      </footer>
+    
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
 
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-    </body>
 </html>
